@@ -63,7 +63,7 @@ inquirer
 		employees.push(manager);
 		console.log(employees);
 	})
-	.then(createEmployees());
+	.then((employee) => createEmployees());
 
 function createEmployees() {
 	inquirer
@@ -80,11 +80,12 @@ function createEmployees() {
 			},
 		])
 		.then((response) => {
+			console.log(response);
 			switch (true) {
-				case response.choices === "Engineer":
+				case response.employeeType === "Engineer":
 					createEngineer();
 					break;
-				case response.choices === "Intern":
+				case response.employeeType === "Intern":
 					createIntern();
 					break;
 				default:
@@ -132,5 +133,9 @@ function createEngineer() {
 			employees.push(engineer);
 			console.log(employees);
 		})
-		.then(createEmployees());
+		.then((response) => createEmployees());
 }
+
+function createIntern() {}
+
+function createPage() {}
