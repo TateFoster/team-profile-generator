@@ -11,7 +11,7 @@ describe("Engineer class", () => {
 		it("should return the value of the github key in the Engineer object", () => {
 			const obj = new Engineer("Jeremy", 1, "test@email.com", "TestHub");
 
-			expect(obj.getGitHub()).toEqual("TestHub");
+			expect(obj.getGithub()).toEqual("TestHub");
 		});
 	});
 	describe("getRole", () => {
