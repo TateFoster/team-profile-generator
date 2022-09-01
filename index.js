@@ -64,6 +64,7 @@ inquirer
 	})
 	.then((employee) => createEmployees());
 
+//Prompts for what type of employee to create next, uses that input to functions to create either engineer or intern or if neither the function to create the html document
 function createEmployees() {
 	inquirer
 		.prompt([
@@ -95,6 +96,7 @@ function createEmployees() {
 		});
 }
 
+// function that prompts user for the information for making an Engineer object
 function createEngineer() {
 	inquirer
 		.prompt([
@@ -135,6 +137,7 @@ function createEngineer() {
 		.then((response) => createEmployees());
 }
 
+// function that prompts user for information to create Intern object
 function createIntern() {
 	inquirer
 		.prompt([
@@ -175,6 +178,7 @@ function createIntern() {
 		.then((response) => createEmployees());
 }
 
+// function that takes the objects created from previous functions and creates card templates form them to be put into the final html document
 function renderCards(people) {
 	const icon = [];
 	const lastList = [];
@@ -216,15 +220,14 @@ function renderCards(people) {
   </div>`;
 }
 
+//function that takes all the objects and templates and returns the html document value for it to be created
 function createPage() {
 	const cards = employees.map((people) => renderCards(people));
 	let finalCard = "";
 	for (text of cards) {
 		finalCard += `\n` + text;
 	}
-	// console.log(finalCard);
-	// console.log(cards);
-	// console.log(employees);
+
 	return `<!DOCTYPE html>
 	<html lang="en">
 		<head>
