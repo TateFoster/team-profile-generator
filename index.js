@@ -209,7 +209,7 @@ function renderCards(people) {
 	  <h4 class="card-title">${icon[0]} ${people.role}</h4>
 	</div>
 	<ul class="list-group list-group-flush">
-	  <li class="list-group-item">ID: ${people.id}</li>
+	  <li class="list-group-item">Employee ID: ${people.id}</li>
 	  <li class="list-group-item">Email: <a href="mailto:${people.email}" class="card-link">${people.email}</a></li>
 	  ${lastList[0]}
 	</ul>
