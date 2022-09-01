@@ -24,6 +24,10 @@
 
 This is a javascript application that uses inquirer prompts to gather information about a programming/engineering team. With prompts for the team manager as well as prompts to add as many enigneers and interns as the user would like. The application prompts for the employees' names, empoyee id, and email. It then also prompts for a different piece of information depending on the employee's position, prompting for the managers office number, an engineers github username and an interns school. The application then compiles these responses and dynmaiclly creates card elements for each entry set. Once the user chooses to no longer enter any more employees the program then generates an html document that has all the information that the user input displayed in a convient manner with each entry set having a card of it's own.
 
+[Team Profile Generator Walkthrough](https://drive.google.com/file/d/1hBmUbRd9KV9jRCt4-vlTVYtMt2y3alPg/view?usp=sharing)
+
+![Generated Webpage](./assets/team-profile-generator-screenshot.png)
+
 ## Usage
 
 ---
